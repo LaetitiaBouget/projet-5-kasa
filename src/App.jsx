@@ -4,6 +4,7 @@ import NotFound from './NotFound'
 import NavBar from './NavBar'
 import Banner from './Banner'
 import Footer from './Footer'
+import PropertyCard from './PropertyCard'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <NavBar />
       <Banner />
       <AppRouter />
+      <PropertyCard />
       <Footer />
     </Router>
   )

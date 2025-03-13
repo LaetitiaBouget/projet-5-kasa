@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import PropertyDetails from './pages/PropertyDetails'
-import PropertyCard from './PropertyCard'
 
 const AppRouter = () => {
     <Router>
