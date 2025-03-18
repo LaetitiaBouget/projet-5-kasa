@@ -1,8 +1,8 @@
-import PropertyCard from "../components/PropertyCard"
+import AccommodationList from "../components/AccommodationList"
 
 function Home() {
-    return <div>Page d'accueil 🏡
-      <PropertyCard />
+    return <div>
+      <AccommodationList />
     </div>
   }
   

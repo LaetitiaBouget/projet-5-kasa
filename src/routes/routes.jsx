@@ -1,12 +1,17 @@
 import Home from '../pages/Home'
 import About from '../pages/About'
-import PropertyDetails from '../pages/PropertyDetails'
+import AccommodationsDetails from '../pages/AccommodationsDetails'
 import NotFound from '../pages/NotFound'
 
+import homeBanner from '../assets/images/homeBanner.png'
+import aboutBanner from '../assets/images/aboutBanner.png'
+
+
+
 const routes = [
-  { path: '/', element: <Home /> },
-  { path: '/about', element: <About /> },
-  { path: '/property-details', element: <PropertyDetails /> },
+  { path: '/', element: <Home />, banner: { image: homeBanner, text: 'Chez vous, partout et ailleurs'} },
+  { path: '/about', element: <About />, banner: { image: aboutBanner} },
+  { path: '/property-details', element: <AccommodationsDetails /> },
   { path: '*', element: <NotFound /> },
 ]
 
