@@ -10,12 +10,14 @@ const AboutMenu = () => {
   ]
 
   return (
-    <section class ="about__menu">
-      {items.map((item, index) => (
-        <Collapse key ={index} title={item.title}>
-          {item.content}
-        </Collapse>
-        ))}
+    <section className="about__container">
+      <div class ="about__menu">
+        {items.map((item, index) => (
+          <Collapse key ={index} title={item.title}>
+            {item.content}
+          </Collapse>
+          ))}
+      </div>
     </section>
   )
 }
