@@ -6,7 +6,7 @@ export default function AccommodationCard({accommodation}) {
         alt ={accommodation.title}
         className ="accommodation__card__image"
       />
-      <h3>{accommodation.title}</h3>
+      <p class="accommodation__title">{accommodation.title}</p>
     </div>
   )
 }

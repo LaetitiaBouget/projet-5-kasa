@@ -7,7 +7,6 @@ import homeBanner from '../assets/images/homeBanner.png'
 import aboutBanner from '../assets/images/aboutBanner.png'
 
 
-
 const routes = [
   { path: '/', element: <Home />, banner: { image: homeBanner, text: 'Chez vous, partout et ailleurs'} },
   { path: '/about', element: <About />, banner: { image: aboutBanner} },
