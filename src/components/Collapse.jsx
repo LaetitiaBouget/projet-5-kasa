@@ -12,7 +12,7 @@ const Collapse = ({title, children}) => {
                 </button>
             </div>
             <div className={`collapse__content ${isExpanded ? "expanded" : ""}`}>
-            {children}
+            <p>{children}</p>
             </div>
         </div>
     )

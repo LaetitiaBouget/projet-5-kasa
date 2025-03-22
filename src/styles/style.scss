@@ -7,6 +7,7 @@
 }
 
 body {
+    width:100vw;
     margin:0;
     padding:0;
     @include flex ($justify:center);
@@ -19,6 +20,7 @@ body {
     max-width: 1440px;
     padding-top: 20px;
     box-sizing: border-box;
+    interpolate-size: allow-keywords;
 }
 
 .navbar{
@@ -120,38 +122,36 @@ footer{
     @include flex ($justify:center);
     margin-top: 30px;
 }
+
+
 .about__menu{
     width:1024px;
     @include flex(column, $gap:30px);
 }
 
-.collapse__content{
-    max-height:0;
-    overflow:hidden;
-}
-
-.collapse__content.expanded{
-    max-height:300px;
-}
-
-.collapse__content.expanded{
-    max-height:300px;
-    background-color:#f6f6f6;
-    font-size:18px;
-    font-weight: 400;
-    padding:20px;
-    line-height: 1.5em;
-}
-
 .collapse__title{
     @include flex ($justify: space-between);
     background-color:#ff6060;
-    padding-left:10px;
-    padding-right:10px;
+    padding-inline: 10px;
     height:52px;
     font-size: 24px;
     font-weight: 700;
     color:white;
+}
+
+.collapse__content{
+    overflow:hidden;
+    padding-inline: 10px;
+    block-size:0;
+    background-color:#f6f6f6;
+    font-size:18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    transition: block-size 400ms;
+}
+
+.collapse__content.expanded{
+    block-size: auto;
 }
 
 .collapse__toggle{
@@ -159,9 +159,10 @@ footer{
     background-color: transparent;
     border:none;
     font-size: 24px;
+    transition: transform 250ms ease-in-out;
 }
 .collapse__toggle.expanded{
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
+    transition: transform 250ms ease-in-out;
 }
-
 
