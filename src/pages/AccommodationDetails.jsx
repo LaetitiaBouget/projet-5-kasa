@@ -1,5 +1,7 @@
+import AccommodationGallery from "../components/AccommodationGallery"
+
 function AccomodationDetails() {
-    return <div>Ceci est le logement🏡</div>
+    return <div><AccommodationGallery /></div>
   }
   
   export default AccomodationDetails
