@@ -23,6 +23,17 @@ body {
     interpolate-size: allow-keywords;
 }
 
+a{
+    text-decoration:none;
+    color:black;
+    font-size: 24px;
+    font-weight:500;
+}
+
+a:visited{
+    color:black;
+}
+
 .navbar{
     width:1240px;
     @include flex($justify:space-between);
@@ -166,3 +177,17 @@ footer{
     transition: transform 250ms ease-in-out;
 }
 
+.not-found{
+    margin-block:100px;
+    @include flex(column,center,$gap:80px);
+    .not-found__content{
+        color:#ff6060;
+        font-size:36px;
+        font-weight: 500;
+    }
+}
+
+.link__not-found{
+    text-decoration: underline;
+    font-size:18px;
+}
