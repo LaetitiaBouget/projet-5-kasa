@@ -6,6 +6,10 @@
     gap: $gap;
 }
 
+*{
+    box-sizing:border-box;
+}
+
 body {
     width:100vw;
     margin:0;
@@ -191,3 +195,141 @@ footer{
     text-decoration: underline;
     font-size:18px;
 }
+
+.slide-show__container{
+    margin-top:30px;
+    width:1240px;
+    height:415px;
+}
+
+.slide-show__gallery{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.slide-show__img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+}
+
+.slide-show__btn{
+    all: unset;
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    padding: 1rem;
+    cursor:pointer;
+}
+
+.slide-show__btn.left{
+    left : 0;
+}
+
+.slide-show__btn.right{
+    right:0;
+}
+
+.slide-show__index{
+    position:absolute;
+    display:block;
+    padding:1rem;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:0 auto;
+    width:max-content;
+    color:white;
+}
+
+.accommodation__summary{
+    @include flex($justify:space-between);
+}
+
+.accommodation__summary__location p{
+    margin:0;
+}
+
+.accommodation__title{
+    color:#ff6060;
+    font-size:36px;
+    font-weight: 500;
+}
+
+.host__name{
+   @include flex(row, $gap:20px);
+   text-align:right;
+   font-size: 18px;
+   font-weight: 500;
+   color:#ff6060;
+}
+
+.host__picture__container{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    overflow:hidden;
+}
+
+.host__picture__container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.tags-rating-info-box{
+    @include flex($justify:space-between);
+    margin-block:20px;
+}
+
+.accommodation__tags{
+    @include flex($gap:10px);
+}
+
+.tag{
+    @include flex($justify:center);
+    background-color: #ff6060;
+    border-radius:10px;
+    color: white;
+    min-width:115px;
+    padding:5px;
+    height:25px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.description-equipments-info-box{
+    @include flex($justify:space-between);
+}
+
+.star-rating{
+    @include flex($gap:8px);
+}
+
+.star {
+    width:24px;
+    height:24px;
+}
+
+.star.inactive{
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+
+.description-equipments-info-box{
+    @include flex($justify: space-between, $align:flex-start, $gap:20px);
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+
+.description__info__box,
+.equipments__info__box {
+    width:582px;
+}
+
