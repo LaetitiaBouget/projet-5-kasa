@@ -20,13 +20,20 @@ function showNextImage (){
   })
 }
 
-return (
-  <div>
-    <img src ={imageUrls[imageIndex]}/>
-    <button onClick={showPrevImage}><img src={ArrowLeft}/></button>
-    <button onClick={showNextImage}><img src={ArrowRight}/></button>
-  </div>
+if (imageUrls.length < 2) {
 
-)
+  return <div><img src ={imageUrls[imageIndex]}/></div>
+}
+
+  return (
+    <div>
+      <img src ={imageUrls[imageIndex]}/>
+      <button onClick={showPrevImage}><img src={ArrowLeft}/></button>
+      <button onClick={showNextImage}><img src={ArrowRight}/></button>
+      <div>
+        <p>{imageIndex+1}/{imageUrls.length}</p>
+      </div>
+    </div>
+  )
 }
 
