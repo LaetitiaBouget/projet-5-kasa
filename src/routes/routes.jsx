@@ -12,6 +12,7 @@ const routes = [
   { path: '/about', element: <About />, banner: { image: aboutBanner} },
   { path: '/accommodation/:id', element: <Accommodation /> },
   { path: '*', element: <NotFound /> },
+  { path: "/not-found", element: <NotFound /> }
 ]
 
 export default routes

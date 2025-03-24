@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { accommodations } from "../assets/dataAccommodations";
 import SlideShow from "./SlideShow";
 import StarRating from "./Rating";
@@ -9,6 +9,11 @@ export default function AccommodationDetails() {
 
 const {id} = useParams();
 const accommodation = accommodations.find(acc => acc.id === id);
+
+if (!accommodation) {
+  return <Navigate to="/not-found" replace />
+}
+
 const [firstName, lastName] = accommodation.host.name.split(' ');
 
   return (
