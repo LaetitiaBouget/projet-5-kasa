@@ -20,20 +20,19 @@ function showNextImage (){
   })
 }
 
-if (imageUrls.length < 2) {
-
-  return <div className="slide-show_gallery"><img src ={imageUrls[imageIndex]}/></div>
-}
-
   return (
     <div className="slide-show__gallery">
-      <img src ={imageUrls[imageIndex]} alt="Photo `${accommodation.title}`" className="slide-show__img"/>
-      <button onClick={showPrevImage} className="slide-show__btn left"><img src={ArrowLeft}/></button>
-      <button onClick={showNextImage} className="slide-show__btn right"><img src={ArrowRight}/></button>
-      <div>
+      <img src ={imageUrls[imageIndex]} alt="Photo" className="slide-show__img"/>
+
+      {imageUrls.length > 1 && (
+        <>
+        <button onClick={showPrevImage} className="slide-show__btn left"><img src={ArrowLeft} className="image-arrow"/></button>
+        <button onClick={showNextImage} className="slide-show__btn right"><img src={ArrowRight} className="image-arrow"/></button>
         <p className="slide-show__index">{imageIndex+1}/{imageUrls.length}</p>
-      </div>
+        </>
+      )}
     </div>
   )
 }
+
 
