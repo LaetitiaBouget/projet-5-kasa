@@ -46,7 +46,7 @@ const [firstName, lastName] = accommodation.host.name.split(' ');
             </div>
          </div>
 
-          <div className="description-equipments-info-box">
+          <div className="accommodations__description-equipments">
             <DescriptionInfoBox description={accommodation.description}/>
             <EquipmentsInfoBox equipments={accommodation.equipments}/>
           </div>

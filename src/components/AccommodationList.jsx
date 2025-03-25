@@ -5,7 +5,7 @@ import AccommodationCard from "./AccommodationCard";
 export default function AccommodationList () {
 
     return (
-        <section className ="accommodation__container">
+        <div className ="accommodation__container">
             <div className = "accommodation__list">
                 {accommodations.map(accommodation => (
                     <Link key={accommodation.id} to={`/accommodation/${accommodation.id}`}>
@@ -13,6 +13,6 @@ export default function AccommodationList () {
                     </Link>
                 ))}
             </div>
-        </section>
+        </div>
     )
 }

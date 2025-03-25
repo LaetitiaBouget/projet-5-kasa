@@ -1,7 +1,9 @@
 import AccommodationDetails from "../components/AccommodationDetails"
 
 function Accomodation() {
-    return <div><AccommodationDetails /></div>
+    return <section>
+      <AccommodationDetails />
+    </section>
   }
   
   export default Accomodation

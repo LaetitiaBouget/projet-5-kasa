@@ -4,8 +4,8 @@ import logoMobile from '../assets/images/LOGO-mobile.png'
 
 function NavBar() {
     return <nav className="navbar">
-        <img src={logoDesktop} alt="Logo KASA" className="logo logo__desktop" />
-        <img src={logoMobile} alt="Logo KASA Mobile" className="logo logo__mobile" />
+        <img src={logoDesktop} alt="Logo KASA" className="logo__desktop" />
+        <img src={logoMobile} alt="Logo KASA Mobile" className="logo__mobile" />
         <ul className ="navbar__link">
             <li>
                 <NavLink to="/" className={({ isActive }) => isActive ? 'navbar__link navbar__active-link' : 'navbar__link'}>Accueil</NavLink >

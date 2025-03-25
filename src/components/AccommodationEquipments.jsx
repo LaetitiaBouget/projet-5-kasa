@@ -3,7 +3,7 @@ import Collapse from "../components/Collapse";
 const EquipmentsInfoBox = ({equipments}) => {
 
     return (
-      <section className="equipments__container">
+      <div className="equipments__container">
         <div class ="equipments__info__box">
             <Collapse title="Équipements">
                 <ul>
@@ -13,7 +13,7 @@ const EquipmentsInfoBox = ({equipments}) => {
                 </ul>
             </Collapse>
         </div>
-      </section>
+      </div>
     )
   }
   

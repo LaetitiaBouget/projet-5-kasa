@@ -1,6 +1,5 @@
 import star from '../assets/images/star.png'
 
-
 const StarRating = ({rating}) => {
     const maxStars = 5
     const activeStars = parseInt (rating)

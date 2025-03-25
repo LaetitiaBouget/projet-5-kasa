@@ -1,9 +1,9 @@
 import AccommodationList from "../components/AccommodationList"
 
 function Home() {
-    return <div>
+    return <section>
       <AccommodationList />
-    </div>
+    </section>
   }
   
   export default Home
