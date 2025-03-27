@@ -1,4 +1,5 @@
 import { useState } from "react";
+import iconChevron from '../assets/images/arrow-back.png'
 
 const Collapse = ({title, children}) => {
 
@@ -8,7 +9,7 @@ const Collapse = ({title, children}) => {
         <div className ="collapse">
             <div className ="collapse__title">{title} 
                 <button className={`collapse__toggle ${isExpanded ? "expanded" : ""}`} onClick= { () => setIsExpanded (!isExpanded) } aria-label="ouverture/fermeture menu">
-                <i className ="fa-solid fa-chevron-up"></i>
+                <img src={iconChevron} alt="bouton menu déroulant"></img>
                 </button>
             </div>
             <div className={`collapse__content ${isExpanded ? "expanded" : ""}`}>

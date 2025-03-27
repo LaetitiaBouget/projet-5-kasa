@@ -166,10 +166,12 @@ footer{
         background-color: transparent;
         border:none;
         font-size: 24px;
-        transition: transform 250ms ease-in-out;
         cursor: pointer;
     }
-    &collapse__toggle.expanded{
+    .collapse__toggle img{
+        transition: transform 250ms ease-in-out;
+    }
+    .collapse__toggle.expanded img{
         transform: rotate(-180deg);
         transition: transform 250ms ease-in-out;
     }
@@ -178,14 +180,14 @@ footer{
 .collapse__content{
     overflow:hidden;
     padding-inline: 10px;
-    block-size:0;
+    max-height:0;
     background-color:#f6f6f6;
     font-size:18px;
     font-weight: 400;
     line-height: 1.5em;
-    transition: block-size 400ms;
+    transition: max-height 400ms ease-in-out;
     &.expanded{
-        block-size: auto;
+        max-height: 300px;
     }
 }
 
