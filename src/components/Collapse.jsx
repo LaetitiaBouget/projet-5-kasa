@@ -7,7 +7,7 @@ const Collapse = ({title, children}) => {
     return (
         <div className ="collapse">
             <div className ="collapse__title">{title} 
-                <button className={`collapse__toggle ${isExpanded ? "expanded" : ""}`} onClick= { () => setIsExpanded (!isExpanded) }>
+                <button className={`collapse__toggle ${isExpanded ? "expanded" : ""}`} onClick= { () => setIsExpanded (!isExpanded) } aria-label="ouverture/fermeture menu">
                 <i className ="fa-solid fa-chevron-up"></i>
                 </button>
             </div>

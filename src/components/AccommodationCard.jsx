@@ -3,10 +3,10 @@ export default function AccommodationCard({accommodation}) {
     <div className="accommodation__card">
       <img
         src={accommodation.cover}
-        alt ={accommodation.title}
+        alt =""
         className ="accommodation__card__image"
       />
-      <p class="accommodation__card__title">{accommodation.title}</p>
+      <h2 class="accommodation__card__title">{accommodation.title}</h2>
     </div>
   )
 }

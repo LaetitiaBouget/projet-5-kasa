@@ -6,7 +6,7 @@ const EquipmentsInfoBox = ({equipments}) => {
       <div className="equipments__container">
         <div class ="equipments__info__box">
             <Collapse title="Équipements">
-                <ul>
+                <ul className="equipments__list" >
                     {equipments.map((equipment, index) => (
                         <li key={index}>{equipment}</li>
                     ))}

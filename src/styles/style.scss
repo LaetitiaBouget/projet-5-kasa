@@ -12,6 +12,11 @@
 
 $main-color: #ff6060;
 
+$width-desktop:1240px;
+$max-width-desktop:1440px;
+$width-mobile: 335px;
+$max-width-mobile:375px;
+
 body {
     width:100vw;
     margin:0;
@@ -23,17 +28,17 @@ body {
 #root {
     width: 100%;
     @include flex(column,center);
-    max-width: 1440px;
+    max-width: $max-width-desktop;
     padding-top: 20px;
     interpolate-size: allow-keywords;
 }
 
 .layout{
-    width:1240px;
+    width:$width-desktop;
 }
 
 .navbar {
-    width: 1240px;
+    width: $width-desktop;
     @include flex($justify: space-between);
     .navbar__link {
         @include flex($gap: 50px);
@@ -292,6 +297,11 @@ footer{
     }
 }
 
+.equipments__list{
+    list-style: none;
+    padding-left:5px;
+}
+
 .accommodation__title, .not-found__content{
     color:$main-color;
     font-size:36px;
@@ -308,13 +318,13 @@ footer{
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: $max-width-mobile) {
     
     .layout{
-        width:375px;
+        width:$max-width-mobile;
     }
     .navbar{
-        width:335px;
+        width:$width-mobile;
         .navbar__link {
             gap:30px;
             font-variant: small-caps;
@@ -331,8 +341,7 @@ footer{
     .banner{
         margin:0 auto;
         margin-top:40px;
-        position:relative;
-        width:335px;
+        width:$width-mobile;
         height:111px;
         padding-inline: 10px;;
         &__text {
@@ -368,7 +377,7 @@ footer{
     }
 
     .about__container .about__menu{
-        width:335px;
+        width:$width-mobile;
         padding-inline:10px;
         @include flex(column, $gap:20px);   
     }
@@ -452,7 +461,7 @@ footer{
         margin-bottom:10px;
         .description__info__box,
         .equipments__info__box {
-            width:335px;
+            width:$width-mobile;
         }
     }
 

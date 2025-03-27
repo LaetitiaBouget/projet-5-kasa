@@ -24,7 +24,7 @@ const [firstName, lastName] = accommodation.host.name.split(' ');
 
         <div className="accommodation__summary">
           <div className ="accommodation__details">
-              <p className="accommodation__title">{accommodation.title}</p>
+              <h1 className="accommodation__title">{accommodation.title}</h1>
               <p className="accommodation__location">{accommodation.location}</p>
               <div className="accommodation__tags">
               {accommodation.tags.map((tag, index) => (
