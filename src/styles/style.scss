@@ -30,7 +30,6 @@ body {
     @include flex(column,center);
     max-width: $max-width-desktop;
     padding-top: 20px;
-    interpolate-size: allow-keywords;
 }
 
 .layout{
